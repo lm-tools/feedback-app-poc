@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback App POC</title>
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-app="surveyApp" ng-controller="MainController as vm">
+
+<div class="container col-md-4 col-md-offset-4">
+
+  <form novalidate ng-submit="vm.save()" form="vm.surveyForm">
+    <h1>Feedback</h1>
+    <div ng-if="vm.message" ng-bind="vm.message">
+    </div>
+
+    <div ng-if="!vm.message">
+      <formly-form model="vm.survey" fields="vm.surveyFields" form="vm.surveyForm">
+        <button type="submit" class="btn btn-primary" ng-disabled="vm.surveyForm.$invalid">Submit
+        </button>
+      </formly-form>
+    </div>
+  </form>
+
+
+</div>
+
+</body>
+
+<!-- Application Dependencies -->
+<script src="node_modules/api-check/dist/api-check.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-formly/dist/formly.js"></script>
+<script
+    src="node_modules/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js"></script>
+
+<!-- Application Scripts -->
+<script src="app.js"></script>
+<script src="scripts/main-controller.js"></script>
+<script src="scripts/survey-config.js"></script>
+</html>
