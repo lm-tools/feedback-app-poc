@@ -32,6 +32,10 @@ Survey app requires only single rest endpoint `POST /survey` in order to persist
 
 Survey is saved in [dynamo-db][dynamo-db] - amazon NOSQL db
 
+### Architecture
+
+![architecture overview](architecture.jpg)
+
 ### Prerequisites
 
 Create a table in DynamoDB, with a `string` primary key called `surveyid`.
