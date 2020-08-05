@@ -1,4 +1,6 @@
-# Feedback app - POC
+# Feedback app - POC - deprecated
+
+*This project is no longer maintained and was superseded by feedback-app*
 
 Take on feedback app using serverless architecture
 
